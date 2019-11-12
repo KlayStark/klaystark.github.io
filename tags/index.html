@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -44,25 +44,25 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     },
     sidebarPadding: 40
   };
 </script>
 
-  <meta name="description" content="形参：函数定义的参数。 实参：函数调用时实际传递的参数。 参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。 实参的个数如果多于形参，可以通过arguments访问。 函数对象的length属性就是函数形参的个数。  arguments对象是所有（非箭头）函数中都可用的局部变量。  JS没有重载函数，但是Arguments对象能够模拟重载。 JS中每个函数都会">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JS arguments详解">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;Hello-world-0&#x2F;index.html">
+  <meta name="description" content="Fight to win or die.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;index.html">
 <meta property="og:site_name" content="Captain Klay&#39;s Blog">
-<meta property="og:description" content="形参：函数定义的参数。 实参：函数调用时实际传递的参数。 参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。 实参的个数如果多于形参，可以通过arguments访问。 函数对象的length属性就是函数形参的个数。  arguments对象是所有（非箭头）函数中都可用的局部变量。  JS没有重载函数，但是Arguments对象能够模拟重载。 JS中每个函数都会">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-11T05:09:32.609Z">
+<meta property="og:description" content="Fight to win or die.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-12T00:57:12.332Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2019/11/09/Hello-world-0/">
+<link rel="canonical" href="http://yoursite.com/tags/">
 
 
 <script id="page-configurations">
@@ -70,13 +70,14 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
-    isPage: false,
+    isPost: false,
+    isPage: true,
     isArchive: false
   };
 </script>
 
-  <title>JS arguments详解 | Captain Klay's Blog</title>
+  <title>tags | Captain Klay's Blog
+  </title>
   
 
 
@@ -128,7 +129,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -142,46 +143,31 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-schedule">
-
-    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -195,7 +181,7 @@
   </span>
   <div class="search-input-container">
     <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
+           placeholder="Searching..." spellcheck="false"
            type="text" id="search-input">
   </div>
   <span class="popup-btn-close">
@@ -222,146 +208,44 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
           <div class="content">
             
 
   <div class="posts-expand">
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/Hello-world-0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Captain Klay">
-      <meta itemprop="description" content="Fight to win or die.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Captain Klay's Blog">
-    </span>
+    
+    
+    
+    <div class="post-block" lang="zh-Hans">
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          JS arguments详解
-        </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+<h1 class="post-title" itemprop="name headline">tags
+</h1>
 
-              <time title="创建时间：2019-11-09 20:58:04" itemprop="dateCreated datePublished" datetime="2019-11-09T20:58:04+08:00">2019-11-09</time>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
+<div class="post-meta">
   
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2019/11/09/Hello-world-0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/09/Hello-world-0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>639</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
 
-        </div>
-      </header>
+</div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
-        <pre><code>形参：函数定义的参数。
-实参：函数调用时实际传递的参数。
-参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。
-实参的个数如果多于形参，可以通过arguments访问。
-函数对象的length属性就是函数形参的个数。
-
-arguments对象是所有（非箭头）函数中都可用的局部变量。
-
-JS没有重载函数，但是Arguments对象能够模拟重载。
-JS中每个函数都会有一个Arguments对象实例arguments，它引用函数的实参，可用数组下标[]的方式引用arguments的元素。
-arguments.length为函数实参个数，arguments.callee引用函数自身。
-
-&lt;script&gt;
-function myFunction(){
-    var x = &quot;&quot;,i,y=document.getElementById(&quot;demo&quot;);
-    for(i=0;i&lt;arguments.length;i++){
-        x += arguments[i] +&quot;,&quot;;
-        y.innerHTML = x;
-    }
-}
-myFunction(2,3,3,5);
-&lt;/script&gt;
-
-//输出2，3，3，5
-
-arguments的访问就像Array对象一样，用0到arguments.length-1来枚举每一个元素 
-arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。</code></pre>
+      
+      
+      <div class="post-body">
+          
+      </div>
+      
+      
+      
     </div>
+    
 
     
     
     
-
-      <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/09/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
-                </a>
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/10/hello/" rel="prev" title="hello">
-                  hello <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
   </div>
 
 
@@ -383,10 +267,10 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          Overview
         </li>
       </ul>
 
@@ -406,7 +290,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
           <a href="/archives/">
         
           <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
   </nav>
@@ -456,12 +340,12 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="Symbols count total">1k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="Reading time total">1 mins.</span>
 </div>
 
         
@@ -471,7 +355,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="总访客量">
+      <span class="site-uv" title="Total Visitors">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -480,7 +364,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="总访问量">
+      <span class="site-pv" title="Total Views">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>

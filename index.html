@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -44,9 +44,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     },
     sidebarPadding: 40
   };
@@ -58,7 +58,7 @@
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
 <meta property="og:site_name" content="Captain Klay&#39;s Blog">
 <meta property="og:description" content="Fight to win or die.">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/">
@@ -127,7 +127,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -141,46 +141,31 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-schedule">
-
-    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
-
-  </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -194,7 +179,7 @@
   </span>
   <div class="search-input-container">
     <input autocomplete="off" autocorrect="off" autocapitalize="none"
-           placeholder="搜索..." spellcheck="false"
+           placeholder="Searching..." spellcheck="false"
            type="text" id="search-input">
   </div>
   <span class="popup-btn-close">
@@ -229,7 +214,7 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/10/hello/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -252,9 +237,9 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-11-10 11:14:12" itemprop="dateCreated datePublished" datetime="2019-11-10T11:14:12+08:00">2019-11-10</time>
+              <time title="Created: 2019-11-10 11:14:12" itemprop="dateCreated datePublished" datetime="2019-11-10T11:14:12+08:00">2019-11-10</time>
             </span>
 
           
@@ -264,7 +249,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">Valine：</span>
+      <span class="post-meta-item-text">Valine: </span>
     
     <a title="valine" href="/2019/11/10/hello/#comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2019/11/10/hello/" itemprop="commentCount"></span>
@@ -272,19 +257,19 @@
   </span>
   
   <br>
-            <span class="post-meta-item" title="本文字数">
+            <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
               <span>2</span>
             </span>
-            <span class="post-meta-item" title="阅读时长">
+            <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
             </span>
 
         </div>
@@ -314,8 +299,8 @@
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/Hello-world-0/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/JS-arguments/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -329,7 +314,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/09/Hello-world-0/" class="post-title-link" itemprop="url">JS arguments详解</a>
+            <a href="/2019/11/09/JS-arguments/" class="post-title-link" itemprop="url">JS arguments详解</a>
         </h1>
 
         <div class="post-meta">
@@ -337,9 +322,9 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-11-09 20:58:04" itemprop="dateCreated datePublished" datetime="2019-11-09T20:58:04+08:00">2019-11-09</time>
+              <time title="Created: 2019-11-09 20:58:04" itemprop="dateCreated datePublished" datetime="2019-11-09T20:58:04+08:00">2019-11-09</time>
             </span>
 
           
@@ -349,27 +334,27 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">Valine：</span>
+      <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2019/11/09/Hello-world-0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/09/Hello-world-0/" itemprop="commentCount"></span>
+    <a title="valine" href="/2019/11/09/JS-arguments/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/09/JS-arguments/" itemprop="commentCount"></span>
     </a>
   </span>
   
   <br>
-            <span class="post-meta-item" title="本文字数">
+            <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>639</span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>776</span>
             </span>
-            <span class="post-meta-item" title="阅读时长">
+            <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
             </span>
 
         </div>
@@ -381,33 +366,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <pre><code>形参：函数定义的参数。
+          <pre><code>##引入：
+
+形参：函数定义的参数。
 实参：函数调用时实际传递的参数。
 参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。
 实参的个数如果多于形参，可以通过arguments访问。
 函数对象的length属性就是函数形参的个数。
 
-arguments对象是所有（非箭头）函数中都可用的局部变量。
+&lt;!--more--&gt;
+##简介：
+
+‘arguments’对象是所有（非箭头）函数中都可用的局部变量。你可以使用arguments对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
+&gt; 1 arguments[0]
+&gt; 2 arguments[1]
+&gt; 3 arguments[2]
 
 JS没有重载函数，但是Arguments对象能够模拟重载。
 JS中每个函数都会有一个Arguments对象实例arguments，它引用函数的实参，可用数组下标[]的方式引用arguments的元素。
 arguments.length为函数实参个数，arguments.callee引用函数自身。
 
-&lt;script&gt;
-function myFunction(){
-    var x = &quot;&quot;,i,y=document.getElementById(&quot;demo&quot;);
-    for(i=0;i&lt;arguments.length;i++){
-        x += arguments[i] +&quot;,&quot;;
-        y.innerHTML = x;
-    }
-}
-myFunction(2,3,3,5);
-&lt;/script&gt;
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> x = <span class="string">""</span>,i,y=<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="built_in">arguments</span>.length;i++)&#123;</span><br><span class="line">            x += <span class="built_in">arguments</span>[i] +<span class="string">","</span>;</span><br><span class="line">            y.innerHTML = x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    myFunction(<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"><span class="comment">//输出2，3，3，5</span></span><br></pre></td></tr></table></figure>
 
-//输出2，3，3，5
 
-arguments的访问就像Array对象一样，用0到arguments.length-1来枚举每一个元素 
-arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。</code></pre>
+1 arguments的访问就像Array对象一样，用0到arguments.length-1来枚举每一个元素 
+2 arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。</code></pre>
       
     </div>
 
@@ -425,7 +408,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
         
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -448,9 +431,9 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="创建时间：2019-11-09 20:49:10" itemprop="dateCreated datePublished" datetime="2019-11-09T20:49:10+08:00">2019-11-09</time>
+              <time title="Created: 2019-11-09 20:49:10" itemprop="dateCreated datePublished" datetime="2019-11-09T20:49:10+08:00">2019-11-09</time>
             </span>
 
           
@@ -460,7 +443,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
       <span class="post-meta-item-icon">
         <i class="fa fa-comment-o"></i>
       </span>
-      <span class="post-meta-item-text">Valine：</span>
+      <span class="post-meta-item-text">Valine: </span>
     
     <a title="valine" href="/2019/11/09/hello-world/#comments" itemprop="discussionUrl">
       <span class="post-comments-count valine-comment-count" data-xid="/2019/11/09/hello-world/" itemprop="commentCount"></span>
@@ -468,19 +451,19 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
   </span>
   
   <br>
-            <span class="post-meta-item" title="本文字数">
+            <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
               </span>
-                <span class="post-meta-item-text">本文字数：</span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
               <span>357</span>
             </span>
-            <span class="post-meta-item" title="阅读时长">
+            <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
             </span>
 
         </div>
@@ -496,7 +479,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/09/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
+                Read more &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -538,10 +521,10 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          Overview
         </li>
       </ul>
 
@@ -561,7 +544,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
           <a href="/archives/">
         
           <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
   </nav>
@@ -611,12 +594,12 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="Symbols count total">1k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="Reading time total">1 mins.</span>
 </div>
 
         
@@ -626,7 +609,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="总访客量">
+      <span class="site-uv" title="Total Visitors">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -635,7 +618,7 @@ arguments对象不是一个 Array 。它类似于Array，但除了length属性�
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="总访问量">
+      <span class="site-pv" title="Total Views">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>

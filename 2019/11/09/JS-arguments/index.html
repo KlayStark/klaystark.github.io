@@ -52,16 +52,17 @@
   };
 </script>
 
-  <meta name="description" content="Fight to win or die.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Captain Klay&#39;s Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+  <meta name="description" content="##引入：  形参：函数定义的参数。 实参：函数调用时实际传递的参数。 参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。 实参的个数如果多于形参，可以通过arguments访问。 函数对象的length属性就是函数形参的个数。  &amp;lt;!--more--&amp;gt; ##简介：  ‘arguments’对象是所有（非箭头）函数中都可用的局部变量。你可以使用ar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS arguments详解">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;09&#x2F;JS-arguments&#x2F;index.html">
 <meta property="og:site_name" content="Captain Klay&#39;s Blog">
-<meta property="og:description" content="Fight to win or die.">
+<meta property="og:description" content="##引入：  形参：函数定义的参数。 实参：函数调用时实际传递的参数。 参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。 实参的个数如果多于形参，可以通过arguments访问。 函数对象的length属性就是函数形参的个数。  &amp;lt;!--more--&amp;gt; ##简介：  ‘arguments’对象是所有（非箭头）函数中都可用的局部变量。你可以使用ar">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-12T01:23:41.444Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/2019/11/">
+<link rel="canonical" href="http://yoursite.com/2019/11/09/JS-arguments/">
 
 
 <script id="page-configurations">
@@ -69,13 +70,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Captain Klay's Blog</title>
+  <title>JS arguments详解 | Captain Klay's Blog</title>
   
 
 
@@ -210,93 +211,146 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/09/JS-arguments/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Captain Klay">
+      <meta itemprop="description" content="Fight to win or die.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Captain Klay's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JS arguments详解
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-09 20:58:04" itemprop="dateCreated datePublished" datetime="2019-11-09T20:58:04+08:00">2019-11-09</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 3 posts in total. Keep on posting.</span>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2019/11/09/JS-arguments/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/11/09/JS-arguments/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>776</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
+        <pre><code>##引入：
+
+形参：函数定义的参数。
+实参：函数调用时实际传递的参数。
+参数匹配是从左向右进行匹配。如果实参个数小于形参，后面的参数对应赋值undefined。
+实参的个数如果多于形参，可以通过arguments访问。
+函数对象的length属性就是函数形参的个数。
+
+&lt;!--more--&gt;
+##简介：
+
+‘arguments’对象是所有（非箭头）函数中都可用的局部变量。你可以使用arguments对象在函数中引用函数的参数。此对象包含传递给函数的每个参数，第一个参数在索引0处。例如，如果一个函数传递了三个参数，你可以以如下方式引用他们：
+&gt; 1 arguments[0]
+&gt; 2 arguments[1]
+&gt; 3 arguments[2]
+
+JS没有重载函数，但是Arguments对象能够模拟重载。
+JS中每个函数都会有一个Arguments对象实例arguments，它引用函数的实参，可用数组下标[]的方式引用arguments的元素。
+arguments.length为函数实参个数，arguments.callee引用函数自身。
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> x = <span class="string">""</span>,i,y=<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>);</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="built_in">arguments</span>.length;i++)&#123;</span><br><span class="line">            x += <span class="built_in">arguments</span>[i] +<span class="string">","</span>;</span><br><span class="line">            y.innerHTML = x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    myFunction(<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">5</span>);</span><br><span class="line"><span class="comment">//输出2，3，3，5</span></span><br></pre></td></tr></table></figure>
+
+
+1 arguments的访问就像Array对象一样，用0到arguments.length-1来枚举每一个元素 
+2 arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性。</code></pre>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-10T11:14:12+08:00"
-              content="2019-11-10">
-          11-10
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/10/hello/" itemprop="url">
-            <span itemprop="name">hello</span>
-          </a>
-      </h2>
+        
 
-    </header>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/09/hello-world/" rel="next" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/11/10/hello/" rel="prev" title="hello">
+                  hello <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-09T20:58:04+08:00"
-              content="2019-11-09">
-          11-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/09/JS-arguments/" itemprop="url">
-            <span itemprop="name">JS arguments详解</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-09T20:49:10+08:00"
-              content="2019-11-09">
-          11-09
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/09/hello-world/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+    <div class="comments" id="comments"></div>
 
         </div>
           
