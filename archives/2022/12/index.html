@@ -52,17 +52,14 @@
   };
 </script>
 
-  <meta name="description" content="最近在迁移此Github+Hexo博客时踩了很多坑。博客是使用hexo-deployer-git这个插件来将本地生成的静态博客发送到远程仓库的。在本地在执行hexo g后，会在博客根目录下生成一个public文件夹，这个文件夹里的文件组合起来就是一个完整的静态博客。接着如果执行hexo d，就会把这个public文件夹的东西完完整整拷贝到.deploy_git文件夹里，然后会把该文件夹里的所有文件">
-<meta property="og:type" content="article">
-<meta property="og:title" content="记录一次Pages服务部署失败的原因">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2022&#x2F;07&#x2F;17&#x2F;%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1Pages%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Klay&#39;s Blog">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2022&#x2F;12&#x2F;index.html">
 <meta property="og:site_name" content="Klay&#39;s Blog">
-<meta property="og:description" content="最近在迁移此Github+Hexo博客时踩了很多坑。博客是使用hexo-deployer-git这个插件来将本地生成的静态博客发送到远程仓库的。在本地在执行hexo g后，会在博客根目录下生成一个public文件夹，这个文件夹里的文件组合起来就是一个完整的静态博客。接着如果执行hexo d，就会把这个public文件夹的东西完完整整拷贝到.deploy_git文件夹里，然后会把该文件夹里的所有文件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-07-17T07:48:50.866Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2022/07/17/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1Pages%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/">
+<link rel="canonical" href="http://yoursite.com/archives/2022/12/">
 
 
 <script id="page-configurations">
@@ -70,13 +67,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
+    isPost: false,
     isPage: false,
-    isArchive: false
+    isArchive: true
   };
 </script>
 
-  <title>记录一次Pages服务部署失败的原因 | Klay's Blog</title>
+  <title>归档 | Klay's Blog</title>
   
 
 
@@ -211,137 +208,54 @@
           <div class="content">
             
 
-  <div class="posts-expand">
-      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/17/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1Pages%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Zhang.CH">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Klay's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          记录一次Pages服务部署失败的原因
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-07-17 10:15:18" itemprop="dateCreated datePublished" datetime="2022-07-17T10:15:18+08:00">2022-07-17</time>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
   
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2022/07/17/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1Pages%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/07/17/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1Pages%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%8E%9F%E5%9B%A0/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>631</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        
+        <span class="collection-header">不错! 目前共计 59 篇日志。 继续努力。</span>
+      </div>
 
       
-        <p>最近在迁移此Github+Hexo博客时踩了很多坑。</p><p>博客是使用hexo-deployer-git这个插件来将本地生成的静态博客发送到远程仓库的。</p><p>在本地在执行hexo g后，会在博客根目录下生成一个public文件夹，这个文件夹里的文件组合起来就是一个完整的静态博客。</p><p>接着如果执行hexo d，就会把这个public文件夹的东西完完整整拷贝到.deploy_git文件夹里，然后会把该文件夹里的所有文件全部推送push到远程库。之后会触发Pages服务的钩子去build项目，然后部署到网站上。</p><a id="more"></a>
-
-
-
-<h2 id="在Github-Actions中报错如下："><a href="#在Github-Actions中报错如下：" class="headerlink" title="在Github Actions中报错如下："></a>在Github Actions中报错如下：</h2><pre><code>Logging at level: debug
-Configuration file: /github/workspace/./_config.yml
-Theme: next
-github-pages 227 | Error:  The next theme could not be found.
-##[debug]Docker Action run completed with exit code 1
-##[debug]Finishing: Build with Jekyll</code></pre><p>打开.deploy_git文件夹，发现很正常，接着查看远程库里的文件，终于发现了问题。</p>
-<p>在远程库的分支里，根本就没有hexo相关的文件，反复折腾过后，至此算是找到原因了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>直接删除本地博客项目的.deploy_git文件夹，重新部署。</p>
-<pre><code>hexo clean
-hexo g
-hexo d</code></pre><p>参考：<a href="https://blog.csdn.net/lewky_liu/article/details/82432045" target="_blank" rel="noopener">Hexo系列 - NexT主题踩坑记录</a></p>
-
+    <div class="collection-year">
+      <h1 class="collection-header">2022</h1>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-      <footer class="post-footer">
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-12-02T20:15:20+08:00"
+              content="2022-12-02">
+          12-02
+        </time>
+      </div>
 
-        
+      <h2 class="post-title">
+          <a class="post-title-link" href="/2022/12/02/Unity&Jenkins/" itemprop="url">
+            <span itemprop="name">Unity 通过Jenkins实现自动化打包</span>
+          </a>
+      </h2>
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-                <a href="/2022/07/12/Unity%20Line%20Renderer/" rel="next" title="Unity Line Renderer">
-                  <i class="fa fa-chevron-left"></i> Unity Line Renderer
-                </a>
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-                <a href="/2022/07/20/Unity%20Ray/" rel="prev" title="Unity Ray">
-                  Unity Ray <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-      </footer>
-    
+    </header>
   </article>
+
+
+    </div>
+  </div>
   
   
   
 
-  </div>
+  
+
 
 
           </div>
           
-    <div class="comments" id="comments"></div>
 
         </div>
           
@@ -366,7 +280,6 @@ hexo d</code></pre><p>参考：<a href="https://blog.csdn.net/lewky_liu/article/
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在Github-Actions中报错如下："><span class="nav-number">1.</span> <span class="nav-text">在Github Actions中报错如下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
