@@ -52,17 +52,17 @@
   };
 </script>
 
-  <meta name="description" content="委托的概念委托（Delegate）类似于一种安全的函数指针。变量是数据的载体，委托是行为的载体。委托需要定义返回类型与参数列表，所以规范了传过来的函数。相关设计模式观察者模式：观察者模式是一种定义了对象之间一对多关系的模式。当被观察者改变状态时，它的所有观察者都会收到通知并做出响应。有时也可以将这种关系理解为发布&#x2F;订阅的模式，即我们所关心的对象（即被观察者）发布消息时，所有订阅该消息的对象都会进行">
+  <meta name="description" content="前言主要使用EPPlus插件。下载地址：Github网盘导入将以下dll文件全部导入到项目的Plugins文件夹目录下。EPPlus.dll   Excel.dll    ICSharpCode.SharpZipLib.dll打包发布还需要在Unity安装目录下Unity\Editor\Data\Mono\lib\mono\2.0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#+Unity 委托与事件">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2022&#x2F;07&#x2F;20&#x2F;Unity%20%E5%A7%94%E6%89%98&#x2F;index.html">
+<meta property="og:title" content="Unity Excel表读写">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2022&#x2F;02&#x2F;15&#x2F;Unity%20Excel%E8%A1%A8%E8%AF%BB%E5%86%99&#x2F;index.html">
 <meta property="og:site_name" content="Klay&#39;s Blog">
-<meta property="og:description" content="委托的概念委托（Delegate）类似于一种安全的函数指针。变量是数据的载体，委托是行为的载体。委托需要定义返回类型与参数列表，所以规范了传过来的函数。相关设计模式观察者模式：观察者模式是一种定义了对象之间一对多关系的模式。当被观察者改变状态时，它的所有观察者都会收到通知并做出响应。有时也可以将这种关系理解为发布&#x2F;订阅的模式，即我们所关心的对象（即被观察者）发布消息时，所有订阅该消息的对象都会进行">
+<meta property="og:description" content="前言主要使用EPPlus插件。下载地址：Github网盘导入将以下dll文件全部导入到项目的Plugins文件夹目录下。EPPlus.dll   Excel.dll    ICSharpCode.SharpZipLib.dll打包发布还需要在Unity安装目录下Unity\Editor\Data\Mono\lib\mono\2.0">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2022-08-25T09:13:51.239Z">
+<meta property="og:updated_time" content="2023-04-17T15:59:30.254Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2022/07/20/Unity%20%E5%A7%94%E6%89%98/">
+<link rel="canonical" href="http://yoursite.com/2022/02/15/Unity%20Excel%E8%A1%A8%E8%AF%BB%E5%86%99/">
 
 
 <script id="page-configurations">
@@ -76,7 +76,7 @@
   };
 </script>
 
-  <title>C#+Unity 委托与事件 | Klay's Blog</title>
+  <title>Unity Excel表读写 | Klay's Blog</title>
   
 
 
@@ -216,7 +216,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/20/Unity%20%E5%A7%94%E6%89%98/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/02/15/Unity%20Excel%E8%A1%A8%E8%AF%BB%E5%86%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -229,7 +229,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          C#+Unity 委托与事件
+          Unity Excel表读写
         </h1>
 
         <div class="post-meta">
@@ -239,7 +239,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-07-20 20:20:18" itemprop="dateCreated datePublished" datetime="2022-07-20T20:20:18+08:00">2022-07-20</time>
+              <time title="创建时间：2022-02-15 07:15:20" itemprop="dateCreated datePublished" datetime="2022-02-15T07:15:20+08:00">2022-02-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,8 +269,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2022/07/20/Unity%20%E5%A7%94%E6%89%98/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2022/07/20/Unity%20%E5%A7%94%E6%89%98/" itemprop="commentCount"></span>
+    <a title="valine" href="/2022/02/15/Unity%20Excel%E8%A1%A8%E8%AF%BB%E5%86%99/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/02/15/Unity%20Excel%E8%A1%A8%E8%AF%BB%E5%86%99/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -280,14 +280,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>555</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -299,20 +299,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="委托的概念"><a href="#委托的概念" class="headerlink" title="委托的概念"></a>委托的概念</h2><p>委托（Delegate）类似于一种安全的函数指针。</p><p>变量是数据的载体，委托是行为的载体。</p><p>委托需要定义返回类型与参数列表，所以规范了传过来的函数。</p><h2 id="相关设计模式"><a href="#相关设计模式" class="headerlink" title="相关设计模式"></a>相关设计模式</h2><p>观察者模式：观察者模式是一种定义了对象之间一对多关系的模式。当被观察者改变状态时，它的所有观察者都会收到通知并做出响应。有时也可以将这种关系理解为发布/订阅的模式，即我们所关心的对象（即被观察者）发布消息时，所有订阅该消息的对象都会进行响应，从而做出某些操作。</p><a id="more"></a>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>主要使用EPPlus插件。</p><p>下载地址：</p><p><a href="https://github.com/EPPlusSoftware/EPPlus" target="_blank" rel="noopener">Github</a></p><p><a href="https://pan.baidu.com/s/1jBi7haWvEgIwL1sabNvXfA?pwd=aiwa#list/path=%2F" target="_blank" rel="noopener">网盘</a></p><h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>将以下dll文件全部导入到项目的Plugins文件夹目录下。</p><pre><code>EPPlus.dll   Excel.dll    ICSharpCode.SharpZipLib.dll</code></pre><p>打包发布还需要在Unity安装目录下</p><pre><code>Unity\Editor\Data\Mono\lib\mono\2.0</code></pre><a id="more"></a>
 
 
 
-<p>例子：在猫身上挂一个铃铛，猫出现时铃铛就会响，老鼠们接收到了铃铛响起的事件后，触发逃跑方法。假设老鼠有很多个，它们就是观察者。猫只有一只，它属于被观察者。</p>
-<p>详情：<a href="https://www.cnblogs.com/sword-magical-blog/p/11430891.html" target="_blank" rel="noopener">浅析观察者、中介者模式在游戏中的应用与delegate原理</a></p>
-<h2 id="委托与事件"><a href="#委托与事件" class="headerlink" title="委托与事件"></a>委托与事件</h2><p>事件Event实质上是对委托的进一步封装，订阅事件的时候本质上是将委托类型的实例添加到委托列表中。事件只能被外部订阅，不能在外部触发，也就是对事件的只能监听“+=”、移除”-=”。</p>
-<ol>
-<li>委托创建时会定义方法的类型。（是否有无参数、有无返回值）</li>
-<li>事件的创建需要一个委托才能声明。</li>
-<li>委托可以在任何类中或类外声明，但是事件只能在类中声明。</li>
-<li>事件只能在当前声明的类中使用，无论将事件设置成public还是static其他类都无法调用。</li>
-</ol>
-<p>详解：<a href="https://blog.csdn.net/qq_42345116/article/details/123408419" target="_blank" rel="noopener">Unity中关于委托与事件的使用及区别</a></p>
+
+
+<p>导入包含I18N的所有动态库，否则打包后不能操作Excel。</p>
+<p>注意：在程序运行期间不要打开对应的Excel文件。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> filePath = Application.dataPath + <span class="string">"/目标名称.xlsx"</span>;</span><br><span class="line"><span class="comment">//获取Excel文件的信息</span></span><br><span class="line">FileInfo fileInfo = <span class="keyword">new</span> FileInfo(filePath);</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过Excel文件信息，打开表格</span></span><br><span class="line"><span class="keyword">using</span> (ExcelPackage excelPackage = <span class="keyword">new</span> ExcelPackage(fileInfo))</span><br><span class="line"><span class="comment">//using是用来强行资源释放（前括号是打开，后括号是关闭）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//创建叫Sheet1的表格</span></span><br><span class="line">    ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add(<span class="string">"Sheet1"</span>);</span><br><span class="line">    <span class="comment">//在读写表格时，读取第一张表：</span></span><br><span class="line">    <span class="comment">//ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[1];</span></span><br><span class="line">    </span><br><span class="line">    worksheet.Cells[<span class="number">1</span>, <span class="number">1</span>].Value = <span class="string">"目标名称"</span>;</span><br><span class="line">    worksheet.Cells[<span class="number">1</span>, <span class="number">2</span>].Value = <span class="string">"设备地址"</span>;</span><br><span class="line">    worksheet.Cells[<span class="number">1</span>, <span class="number">3</span>].Value = <span class="string">"地址"</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">12</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="comment">//写入</span></span><br><span class="line">        worksheet.Cells[i, <span class="number">1</span>].Value = <span class="string">"目标名称"</span> + <span class="string">" "</span> + (i - <span class="number">1</span>);</span><br><span class="line">        worksheet.Cells[i, <span class="number">2</span>].Value = <span class="string">"设备地址"</span> + <span class="string">" "</span> + (i - <span class="number">1</span>);</span><br><span class="line">        worksheet.Cells[i, <span class="number">3</span>].Value = <span class="string">"地址"</span> + <span class="string">" "</span> + (i - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    excelPackage.Save();<span class="comment">//写入后保存表格</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在创建表格时，判断文件重名：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FileInfo fileInfo = <span class="keyword">new</span> FileInfo(filePath);</span><br><span class="line"><span class="keyword">if</span> (fileInfo.Exists)</span><br><span class="line">&#123;</span><br><span class="line">    fileInfo.Delete();</span><br><span class="line">    fileInfo = <span class="keyword">new</span> FileInfo(Application.dataPath + <span class="string">"/目标名称.xlsx"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h2><p>通过int索引取得Excel文件中的第N张表</p>
+<pre><code>ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets[1];</code></pre><p>通过string获得Excel的表格</p>
+<pre><code>ExcelWorksheet worksheet1 = excelPackage.Workbook.Worksheets[&quot;Sheet1&quot;];</code></pre><p>获得当前表格数目</p>
+<pre><code>int i = excelPackage.Workbook.Worksheets.Count;</code></pre><p>添加一张表格</p>
+<pre><code>ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add(&quot;Sheet2&quot;);</code></pre><p>给表格名称添加颜色（表头颜色换成绿色）</p>
+<pre><code>worksheet.TabColor = System.Drawing.Color.ForestGreen;</code></pre><hr>
+<p>获得表格中最大行和列</p>
+<pre><code>int row = worksheet.Dimension.End.Row;//行
+int column = worksheet.Dimension.End.Column;//列</code></pre><p>获得第x格子中的内容</p>
+<pre><code>worksheet.Cells[1, 1].Value.ToString();//获得[1,1]位置的内容，可以写入（写入不加ToString）也可以读取 </code></pre><hr>
+<p>获得一个Excel文件</p>
+<pre><code>ExcelPackage excelPackage = new ExcelPackage(fileInfo)；</code></pre><p>保存修改后的Excel文件</p>
+<pre><code>excelPackage.Save();//保存
+excelPackage.SaveAs();//另存为</code></pre><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://hanchen.blog.csdn.net/article/details/128893023?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-128893023-blog-125322835.235%5Ev29%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-128893023-blog-125322835.235%5Ev29%5Epc_relevant_default_base3&utm_relevant_index=2" target="_blank" rel="noopener">Unity3D操作数据之Excel表操作(创建、读取、写入、修改)</a></p>
 
     </div>
 
@@ -326,16 +339,16 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2022/07/20/Unity%20Ray/" rel="next" title="Unity Ray">
-                  <i class="fa fa-chevron-left"></i> Unity Ray
+                <a href="/2022/01/24/54.%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/" rel="next" title="54.螺旋矩阵">
+                  <i class="fa fa-chevron-left"></i> 54.螺旋矩阵
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2022/07/25/Unity%20%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="prev" title="Unity 单例模式">
-                  Unity 单例模式 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/02/27/UE4%E7%B1%BB%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/" rel="prev" title="UE4类命名规则">
+                  UE4类命名规则 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -376,7 +389,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#委托的概念"><span class="nav-number">1.</span> <span class="nav-text">委托的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关设计模式"><span class="nav-number">2.</span> <span class="nav-text">相关设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#委托与事件"><span class="nav-number">3.</span> <span class="nav-text">委托与事件</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入"><span class="nav-number">2.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用API"><span class="nav-number">4.</span> <span class="nav-text">常用API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
